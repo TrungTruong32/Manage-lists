@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Danh sách Sản phẩm</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Đơn đặt hàng Nhà hàng Miền Tây</h1>
+
+        <div class="input-group">
+            <select id="productName" onchange="updatePrice()">
+                <option value="">Chọn món ăn</option>
+                <option value="20000">Gỏi cuốn</option>
+                <option value="30000">Bún mắm</option>
+                <option value="25000">Bánh xèo</option>
+                <option value="40000">Lẩu cá linh</option>
+                <option value="50000">Lẩu mắm</option>
+            </select>
+
+            <input type="number" id="productPrice" placeholder="Giá sản phẩm" readonly>
+            <input type="number" id="productQuantity" placeholder="Số lượng">
+            <input type="text" id="productNote" placeholder="Ghi chú cho nhà hàng">
+            <button onclick="addProduct()">Thêm</button>
+        </div>
+
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>
+                        Tên Sản Phẩm
+                        <i class="fas fa-sort" onclick="sortTable(0)"></i>
+                    </th>
+                    <th>
+                        Giá
+                        <i class="fas fa-sort" onclick="sortTable(1)"></i>
+                    </th>
+                    <th>
+                        Số Lượng
+                        <i class="fas fa-sort" onclick="sortTable(2)"></i>
+                    </th>
+                    <th>
+                        Tổng Giá
+                        <i class="fas fa-sort" onclick="sortTable(3)"></i>
+                    </th>
+                    <th>Ghi chú</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody id="danhSachSanPham"></tbody>
+        </table>
+
+        <div id="summary">
+            <p><strong>Tổng số lượng:</strong> <span id="totalQuantity">0</span></p>
+            <p><strong>Tổng giá trị:</strong> <span id="totalValue">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

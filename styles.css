@@ -1,0 +1,166 @@
+/* Đặt ảnh nền với độ mờ */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center/cover;
+    filter: blur(8px); /* Tạo độ mờ cho ảnh nền */
+    z-index: -1;
+}
+
+/* Container chính */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Làm mờ nền trong container */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+/* Nhóm input và nút */
+.input-group {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-group button {
+    padding: 8px 12px;
+    font-size: 16px;
+    flex-wrap: wrap;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-group button:hover {
+    background-color: #45a049;
+}
+
+/* Menu gợi ý món ăn */
+
+
+.suggestions {
+    /* position: absolute; */
+    top: 200px;
+    width: calc(100% - 20px); /* Để chiều rộng ô gợi ý khớp với ô nhập liệu */
+    max-width: 200px; /* Hoặc đặt chiều rộng cố định */
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Bo tròn các góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bóng đổ để nổi bật */
+    z-index: 1;
+    display: none; /* Mặc định ẩn */
+}
+
+.suggestions div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Nhóm nút sắp xếp */
+.button-group {
+    margin-bottom: 20px;
+}
+
+.button-group button {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #5bc0de;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+    background-color: #31b0d5;
+}
+
+/* Bảng sản phẩm */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Nút xóa */
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Tổng số lượng và tổng giá trị */
+#summary {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}

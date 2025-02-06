@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Danh sách Sản phẩm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Đơn đặt hàng Nhà hàng Miền Tây</h1>
+
+        <div class="input-group">
+            <select id="menuSelect"></select>
+
+            <input type="number" id="productPrice" placeholder="Giá sản phẩm" readonly>
+            <input type="number" id="productQuantity" placeholder="Số lượng">
+            <input type="text" id="productNote" placeholder="Ghi chú cho nhà hàng">
+            <button onclick="addProduct()">Thêm</button>
+        </div>
+
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Tên Sản Phẩm</th>
+                    <th onclick="sortTable(1)">Giá</th>
+                    <th onclick="sortTable(2)">Số Lượng</th>
+                    <th onclick="sortTable(3)">Tổng Giá</th>
+                    <th>Ghi chú</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody id="danhSachSanPham"></tbody>
+        </table>
+
+        <div id="summary">
+            <p><strong>Tổng số lượng:</strong> <span id="totalQuantity">0</span></p>
+            <p><strong>Tổng giá trị:</strong> <span id="totalValue">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
